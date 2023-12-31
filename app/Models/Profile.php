@@ -9,6 +9,13 @@ class Profile extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'mobile',
+        'image'
+    ];
+
+
+
     public function profileable(){
         return $this->morphTo();
     }

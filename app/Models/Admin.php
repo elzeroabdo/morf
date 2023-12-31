@@ -43,7 +43,7 @@ class Admin extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function Profile(){
+    public function profile(){
         return $this->morphOne(Profile::class,'profileable');
     }
 
