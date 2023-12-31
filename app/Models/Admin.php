@@ -21,7 +21,10 @@ class Admin extends Authenticatable
         'name',
         'email',
         'password',
+        'images',
     ];
+
+
 
     /**
      * The attributes that should be hidden for serialization.
@@ -41,7 +44,11 @@ class Admin extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
+        'images' => 'json',
     ];
+
+    // images as json
+
 
     public function profile(){
         return $this->morphOne(Profile::class,'profileable');
